@@ -1,0 +1,49 @@
+{
+  "admins": [
+    {
+      "id": 1,
+      "name": "eee",
+      "email": "eee",
+      "role": "admin",
+      "usersIds": [1, 2, 3]
+    },
+    {
+      "name": "rrrrryuyyyu",
+      "email": "rrrr",
+      "id": 2,
+      "usersIds": [1, 2, 3]
+    },
+    {
+      "name": "cvcvcvvcv",
+      "email": "cvbcvcv",
+      "id": 3,
+      "usersIds": [1, 2, 3]
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Daniel",
+      "email": "daniel@yahoo.com",
+      "phone": "0710583954",
+      "address": "Piatra Neamt, Mihai Viteazu 14",
+      "role": "user"
+    },
+    {
+      "id": 2,
+      "name": "Mihai",
+      "email": "mihai@yahoo.com",
+      "phone": "0710583954",
+      "address": "Iasi, Mihai Viteazu 14",
+      "role": "user"
+    },
+    {
+      "id": 3,
+      "name": "Andrei",
+      "email": "andrei@yahoo.com",
+      "phone": "0710583954",
+      "address": "Targu Neamt, Mihai Viteazu 14",
+      "role": "user"
+    }
+  ]
+}
