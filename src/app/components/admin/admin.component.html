@@ -1,1 +1,27 @@
-<p>admin works!</p>
+<div *ngIf="admin">
+  <div class="card  border border-primary border-opacity-50 border-2 rounded p-0 m-3 text-bg-dark">
+    <!-- <img class="rounded" src="{{recipe.imageUrl}}" alt=""> -->
+    <div class="card-body">
+      <h5 class="card-title fs-4">{{admin.name}}</h5>
+      <p class="flex-column d-flex fs-6">
+        <!-- {{recipe.ingredients.join(' ')}} -->
+        {{admin.email}}
+      </p>
+      <p class="card-text description fs-6 description">
+        <!-- <app-more-less [text]="recipe.description" [wordLimit]="130"></app-more-less> -->
+      </p>
+      <div class="d-flex m-4 mb-0 justify-content-center">
+
+        <button type="button" class="btn btn-warning fw-semibold edit-recipe" data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop" (click)="onEdit()">
+          Editare Admin
+        </button>
+        <button (click)="deleteAdmin(admin)" type="button" class="btn btn-danger fw-semibold delete-recipe">Stergere
+        </button>
+      </div>
+      <div><a class="btn2" [routerLink]="'/home/admins/users'"><button class="btn btn-primary">Users</button></a></div>
+    </div>
+
+  </div>
+
+</div>

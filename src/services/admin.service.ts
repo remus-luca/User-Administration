@@ -30,7 +30,7 @@ export class AdminService {
   putAdmin(data: any, id: number) {
     return this.http.put<any>('http://localhost:3000/admins/' + id, data);
   }
-  updateAdmin(payload: Admin, id: number): Observable<Admin> {
+  updatedAdminUsersIds(payload: Partial<Admin>, id: number): Observable<Admin> {
     const url = `${this.url}/admins/${id}`;
     return this.http.patch<Admin>(url, payload, httpOptions);
   }

@@ -48,9 +48,11 @@ export class AdminStoreService {
       .subscribe((admin) => this.addAdmin$.next(admin));
   }
   updateAdmin(payload: Admin, id: number) {
-    this.adminService.updateAdmin(payload, id).subscribe((updatedAdmin) => {
-      this.updateAdmin$.next(updatedAdmin);
-    });
+    this.adminService
+      .updatedAdminUsersIds(payload, id)
+      .subscribe((updatedAdmin) => {
+        this.updateAdmin$.next(updatedAdmin);
+      });
   }
   deleteAdmin(id: number) {
     this.deleteAdmin$.next(id);

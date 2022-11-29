@@ -8,19 +8,31 @@ import { AdminsComponent } from './components/admins/admins.component';
 import { HomeComponent } from './components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { HttpClientModule } from '@angular/common/http';
+import { AddAdminComponent } from './components/add-admin/add-admin.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UsersComponent } from './components/users/users.component';
+import { RouterModule } from '@angular/router';
+
 @NgModule({
   declarations: [
     AppComponent,
     AdminComponent,
     AdminsComponent,
-    HomeComponent
+    AddAdminComponent,
+    UsersComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    RouterModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

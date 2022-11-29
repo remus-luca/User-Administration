@@ -1,23 +1,22 @@
 {
   "admins": [
     {
+      "name": "Andreea",
+      "email": "andreea105@yahoo.com",
       "id": 1,
-      "name": "eee",
-      "email": "eee",
-      "role": "admin",
-      "usersIds": [1, 2, 3]
+      "usersIds": [
+        1,
+        2
+      ]
     },
     {
-      "name": "rrrrryuyyyu",
-      "email": "rrrr",
+      "name": "Georgiana",
+      "email": "gerogiana640@yahoo.com",
       "id": 2,
-      "usersIds": [1, 2, 3]
-    },
-    {
-      "name": "cvcvcvvcv",
-      "email": "cvbcvcv",
-      "id": 3,
-      "usersIds": [1, 2, 3]
+      "usersIds": [
+        1,
+        2
+      ]
     }
   ],
   "users": [
@@ -34,15 +33,7 @@
       "name": "Mihai",
       "email": "mihai@yahoo.com",
       "phone": "0710583954",
-      "address": "Iasi, Mihai Viteazu 14",
-      "role": "user"
-    },
-    {
-      "id": 3,
-      "name": "Andrei",
-      "email": "andrei@yahoo.com",
-      "phone": "0710583954",
-      "address": "Targu Neamt, Mihai Viteazu 14",
+      "address": "Piatra Neamt, Mihai Viteazu 14",
       "role": "user"
     }
   ]
