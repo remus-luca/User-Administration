@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Admin } from 'src/interfaces';
+import { Component, Input, OnInit } from '@angular/core';
+import { Admin, User } from 'src/interfaces';
+import { UserService } from 'src/services/user.service';
 import { AdminStoreService } from 'src/store/admin-store.service';
 
 @Component({
@@ -10,9 +11,15 @@ import { AdminStoreService } from 'src/store/admin-store.service';
 export class AdminsComponent implements OnInit {
   admins: Admin[];
   adminToBeEdited: Admin = null;
-  constructor(private adminsStore: AdminStoreService) {}
+  constructor(
+    private adminsStore: AdminStoreService,
+    private userService: UserService
+  ) {}
+
+  allUsers: User[];
 
   ngOnInit(): void {
+    this.userService.getUsers().subscribe((data) => (this.allUsers = data));
     this.adminsStore.admins$.subscribe((admins) => {
       this.admins = admins;
     });

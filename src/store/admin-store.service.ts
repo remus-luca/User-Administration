@@ -22,12 +22,7 @@ export class AdminStoreService {
           ? updatedAdmins.push(updatedAdmin)
           : updatedAdmins.push(admin);
       });
-      this.admins$.next(
-        // this.recipes$.getValue().map((recipe) => {
-        //   return recipe.id === updatedRecipe.id ? updatedRecipe : recipe;
-        // })
-        updatedAdmins
-      );
+      this.admins$.next(updatedAdmins);
     });
     this.deleteAdmin$.subscribe((idtoBeDeleted: number) => {
       this.admins$.next(

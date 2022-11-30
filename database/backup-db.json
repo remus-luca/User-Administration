@@ -4,13 +4,19 @@
       "name": "Andreea",
       "email": "andreea105@yahoo.com",
       "id": 1,
-      "usersIds": [1, 2]
+      "userIds": [1, 8, 3]
     },
     {
-      "name": "Georgiana",
-      "email": "gerogiana640@yahoo.com",
-      "id": 2,
-      "usersIds": [1, 2]
+      "name": "Alex",
+      "email": "alex205@yahoo.com",
+      "id": 3,
+      "userIds": [2, 6, 4]
+    },
+    {
+      "name": "Manuel",
+      "email": "manuel694@yahoo.com",
+      "id": 4,
+      "userIds": [5, 7, 3]
     }
   ],
   "users": [
@@ -19,7 +25,7 @@
       "name": "Daniel",
       "email": "daniel@yahoo.com",
       "phone": "0710583954",
-      "address": "Piatra Neamt, Mihai Viteazu 14",
+      "address": "Bucuresti, Ion Ghica, 14",
       "role": "user"
     },
     {
@@ -27,7 +33,55 @@
       "name": "Mihai",
       "email": "mihai@yahoo.com",
       "phone": "0710583954",
-      "address": "Piatra Neamt, Mihai Viteazu 14",
+      "address": "Iasi, Bradean, 304",
+      "role": "user"
+    },
+    {
+      "id": 3,
+      "name": "Razvan",
+      "email": "razvan859@gmail.com",
+      "phone": "0759037660",
+      "address": "Buzau, Vintila Voda 104",
+      "role": "user"
+    },
+    {
+      "id": 4,
+      "name": "Laviniu",
+      "email": "laviniu398@microsoft.com",
+      "phone": "0709275468",
+      "address": "Suceava, Valea Salciei 49",
+      "role": "user"
+    },
+    {
+      "id": 5,
+      "name": "Maria",
+      "email": "maria1045@microsoft.com",
+      "phone": "0765765485",
+      "address": "Oradea, Mihai Eminescu 368",
+      "role": "user"
+    },
+    {
+      "id": 6,
+      "name": "Ionel",
+      "email": "ionel387@gmail.com",
+      "phone": "0756409809",
+      "address": "Brasov, Garii 56",
+      "role": "user"
+    },
+    {
+      "id": 7,
+      "name": "Miruna",
+      "email": "miruna409@yahoo.com",
+      "phone": "0709275468",
+      "address": "Sibiu, Independentei 97",
+      "role": "user"
+    },
+    {
+      "id": 8,
+      "name": "Anca",
+      "email": "anca438@yahoo.com",
+      "phone": "0745609804",
+      "address": "Calarasi, Unirii 04",
       "role": "user"
     }
   ]

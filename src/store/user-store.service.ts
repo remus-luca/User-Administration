@@ -22,12 +22,7 @@ export class UserStoreService {
           ? updatedUsers.push(updatedUser)
           : updatedUsers.push(user);
       });
-      this.users$.next(
-        // this.recipes$.getValue().map((recipe) => {
-        //   return recipe.id === updatedRecipe.id ? updatedRecipe : recipe;
-        // })
-        updatedUsers
-      );
+      this.users$.next(updatedUsers);
     });
     this.deleteUser$.subscribe((idtoBeDeleted: number) => {
       this.users$.next(
@@ -39,17 +34,6 @@ export class UserStoreService {
 
     this.userService.getUsers().subscribe((users) => {
       this.users$.next(users);
-    });
-  }
-
-  addNewUser(user: User) {
-    this.userService
-      .postUser(user)
-      .subscribe((user) => this.addUser$.next(user));
-  }
-  updateUser(payload: User, id: number) {
-    this.userService.updateUser(payload, id).subscribe((updatedUser) => {
-      this.updateUser$.next(updatedUser);
     });
   }
   deleteUser(id: number) {

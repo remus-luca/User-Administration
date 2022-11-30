@@ -1,5 +1,6 @@
 <app-add-admin [adminToBeEdited]="adminToBeEdited" (close)="onFormClose()"></app-add-admin>
 <div class="container card-group">
-  <app-admin *ngFor="let admin of admins" [admin]="admin" (editSuperAdmin)="editAdmin($event)"></app-admin>
-</div>
+  <app-admin *ngFor="let admin of admins" [admin]="admin" (editSuperAdmin)="editAdmin($event)" [allUsers]="allUsers">
+  </app-admin>
+  </div>
 
