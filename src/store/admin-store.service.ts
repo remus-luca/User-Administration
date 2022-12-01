@@ -26,8 +26,8 @@ export class AdminStoreService {
     });
     this.deleteAdmin$.subscribe((idtoBeDeleted: number) => {
       this.admins$.next(
-        this.admins$.getValue().filter((recipe) => {
-          return recipe.id != idtoBeDeleted;
+        this.admins$.getValue().filter((admin) => {
+          return admin.id != idtoBeDeleted;
         })
       );
     });

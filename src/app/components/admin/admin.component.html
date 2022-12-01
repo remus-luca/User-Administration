@@ -1,10 +1,10 @@
 <div class="card border-dark m-2 mb-0  " style="max-width: 23rem;" *ngIf="admin">
   <div class="card-header fs-5 d-flex align-items-center">{{admin.name}}
-    <button type="button" class="btn btn-warning fw-semibold edit-recipe m-2" data-bs-toggle="modal"
+    <button type="button" class="btn btn-warning fw-semibold  m-2" data-bs-toggle="modal"
       data-bs-target="#staticBackdrop" (click)="onEdit()">
       Editare Admin
     </button> <button (click)="deleteAdmin(admin)" type="button"
-      class="btn btn-danger fw-semibold delete-recipe m-2">Stergere
+      class="btn btn-danger fw-semibold m-2">Stergere
     </button></div>
     <div class="card-header fs-5">{{admin.email}}</div>
     <div class="card-body text-dark " *ngFor="let user of users">
@@ -12,6 +12,10 @@
       <p class="card-text fs-5">{{user.email}}</p>
       <p class="card-text fs-5">{{user.phone}}</p>
       <p class="card-text fs-5">{{user.address}}</p>
-      <button class="btn btn-primary">Delete</button>
+      <button type="button" class="btn btn-warning fw-semibold  m-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop1"
+        id="#staticBackdrop1" (click)="Edit()">
+        Editare User
+      </button>
+      <button class="btn btn-danger fw-semibold  m-2" (click)="onDelete(user.id)">Stergere</button>
     </div>
 </div>

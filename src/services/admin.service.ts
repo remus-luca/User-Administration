@@ -27,6 +27,7 @@ export class AdminService {
     const url = `${this.url}/admins/${id}`;
     return this.http.get<Admin>(url);
   }
+
   putAdmin(data: any, id: number) {
     return this.http.put<any>('http://localhost:3000/admins/' + id, data);
   }

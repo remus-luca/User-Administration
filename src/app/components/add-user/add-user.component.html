@@ -1,0 +1,87 @@
+<button type="button" class="btn btn-info m-2 fw-semibold" data-bs-toggle="modal" data-bs-target="#staticBackdrop1"
+  id="#staticBackdrop1">
+  Adaugare User
+</button>
+
+<div class="modal top fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">User</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="form">
+          <div class="form-group">
+            <label for="formGroupExampleInput4">Nume:</label>
+            <input autocomplete="off" formControlName="name" type="text" class="form-control"
+              id="formGroupExampleInput4" placeholder="Nume">
+          </div>
+          <div *ngIf="form.controls['name'].invalid  &&( form.controls['name'].dirty || form.controls['name'].touched)">
+            <div class="fs-5  text-warning fw-semibold"
+              *ngIf="form.controls['name'].errors && form.controls['name'].errors['required']">
+              Va rugam
+              introduceti numele
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="formGroupExampleInput2">Email:</label>
+            <input autocomplete="off" formControlName="email" type="email" class="form-control"
+              id="formGroupExampleInput2" placeholder="Email" name="email" ngModel email="true">
+          </div>
+          <div
+            *ngIf="form.controls['email'].invalid  &&( form.controls['email'].dirty || form.controls['email'].touched)">
+            <div class="fs-5  text-danger fw-semibold"
+              *ngIf="form.controls['email'].errors && form.controls['email'].errors['required']">
+              Va rugam
+              introduceti emailul
+            </div>
+            <div class="fs-5 text-warning fw-semibold"
+              *ngIf="form.controls['name'].errors && form.controls['name'].errors['minlength']">
+              Va rugam introduceti minim 3 caractere
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="formGroupExampleInput2">Phone:</label>
+            <input autocomplete="off" formControlName="phone" type="text" class="form-control"
+              id="formGroupExampleInput2" placeholder="Phone">
+          </div>
+          <div
+            *ngIf="form.controls['phone'].invalid  &&( form.controls['phone'].dirty || form.controls['phone'].touched)">
+            <div class="fs-5  text-danger fw-semibold"
+              *ngIf="form.controls['phone'].errors && form.controls['phone'].errors['required']">
+              Va rugam
+              introduceti telefonul
+            </div>
+
+          </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput2">Adresa:</label>
+            <input autocomplete="off" formControlName="address" type="text" class="form-control"
+              id="formGroupExampleInput2" placeholder="Adresa">
+          </div>
+          <div
+            *ngIf="form.controls['address'].invalid  &&( form.controls['address'].dirty || form.controls['address'].touched)">
+            <div class="fs-5  text-danger fw-semibold"
+              *ngIf="form.controls['address'].errors && form.controls['address'].errors['required']">
+              Va rugam
+              introduceti adresa
+            </div>
+
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger fw-semibold cancel" data-bs-dismiss="modal"
+          (click)="onClose()">Cancel</button>
+        <button type="button" class="btn btn-primary fw-semibold save" data-bs-dismiss="modal" [disabled]="!form.valid"
+          (click)="addUser()">{{submitButton}}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -11,6 +11,7 @@ import { AdminStoreService } from 'src/store/admin-store.service';
 export class AdminsComponent implements OnInit {
   admins: Admin[];
   adminToBeEdited: Admin = null;
+  userToBeEdited: User = null;
   constructor(
     private adminsStore: AdminStoreService,
     private userService: UserService
@@ -27,7 +28,13 @@ export class AdminsComponent implements OnInit {
   editAdmin(admin: Admin) {
     this.adminToBeEdited = admin;
   }
+  editUser(user: User) {
+    this.userToBeEdited = user;
+  }
   onFormClose() {
     this.adminToBeEdited = null;
+  }
+  closeForm() {
+    this.userToBeEdited = null;
   }
 }

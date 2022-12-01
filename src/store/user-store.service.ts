@@ -36,6 +36,18 @@ export class UserStoreService {
       this.users$.next(users);
     });
   }
+  addNewUser(user: User) {
+    this.userService
+      .postUser(user)
+      .subscribe((user) => this.addUser$.next(user));
+  }
+  updateUser(payload: User, id: number) {
+    this.userService
+      .updatedUserAdminsIds(payload, id)
+      .subscribe((updatedUser) => {
+        this.updateUser$.next(updatedUser);
+      });
+  }
   deleteUser(id: number) {
     this.deleteUser$.next(id);
   }

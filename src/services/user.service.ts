@@ -21,10 +21,17 @@ export class UserService {
     return this.http.get<User[]>(url);
   }
   getUsersByIds(ids: number[]): Observable<User[]> {
-    const url = `${this.baseUrl}/users/${ids
+    const url = `${this.baseUrl}/users?${ids
       .map((id) => 'id=' + id)
       .join('&')}`;
     return this.http.get<User[]>(url);
+  }
+  postUser(data: any) {
+    return this.http.post<any>('http://localhost:3000/users/', data);
+  }
+  updatedUserAdminsIds(payload: Partial<User>, id: number): Observable<User> {
+    const url = `${this.baseUrl}/users/${id}`;
+    return this.http.patch<User>(url, payload, httpOptions);
   }
   getUser(id: number): Observable<User> {
     const url = `${this.baseUrl}/users/${id}`;
