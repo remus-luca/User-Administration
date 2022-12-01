@@ -4,36 +4,19 @@
       "name": "Andreea",
       "email": "andreea105@yahoo.com",
       "id": 1,
-      "userIds": [
-        1,
-        8,
-        3
-      ]
+      "userIds": [1, 8, 3]
     },
     {
       "name": "Alex",
       "email": "alex205@yahoo.com",
       "id": 3,
-      "userIds": [
-        2,
-        6,
-        4
-      ]
+      "userIds": [2, 6, 4]
     },
     {
       "name": "Manuel",
       "email": "manuel694@yahoo.com",
       "id": 4,
-      "userIds": [
-        5,
-        7,
-        3
-      ]
-    },
-    {
-      "name": "jhhjhjj",
-      "email": "jhjjhhj@ghghg",
-      "id": 5
+      "userIds": [5, 7, 3]
     }
   ],
   "users": [

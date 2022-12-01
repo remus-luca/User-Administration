@@ -19,34 +19,34 @@
               id="formGroupExampleInput4" placeholder="Nume">
           </div>
           <div *ngIf="form.controls['name'].invalid  &&( form.controls['name'].dirty || form.controls['name'].touched)">
-            <div class="fs-5  text-warning fw-semibold"
+            <div class="fs-5  text-danger fw-semibold"
               *ngIf="form.controls['name'].errors && form.controls['name'].errors['required']">
               Va rugam
               introduceti numele
             </div>
           </div>
-
+          <div class="fs-5 text-warning fw-semibold"
+            *ngIf="form.controls['name'].errors && form.controls['name'].errors['minlength']">
+            Va rugam introduceti minim 3 caractere
+          </div>
           <div class="form-group">
             <label for="formGroupExampleInput2">Email:</label>
             <input autocomplete="off" formControlName="email" type="email" class="form-control"
-              id="formGroupExampleInput2" placeholder="Email" name="email" ngModel email="true">
+              id="formGroupExampleInput2" placeholder="Email" name="email"  email="true">
           </div>
           <div
             *ngIf="form.controls['email'].invalid  &&( form.controls['email'].dirty || form.controls['email'].touched)">
             <div class="fs-5  text-danger fw-semibold"
               *ngIf="form.controls['email'].errors && form.controls['email'].errors['required']">
               Va rugam
-              introduceti emailul
+              introduceti o adresa de email
             </div>
-            <div class="fs-5 text-warning fw-semibold"
-              *ngIf="form.controls['name'].errors && form.controls['name'].errors['minlength']">
-              Va rugam introduceti minim 3 caractere
-            </div>
+
           </div>
 
           <div class="form-group">
             <label for="formGroupExampleInput2">Phone:</label>
-            <input autocomplete="off" formControlName="phone" type="text" class="form-control"
+            <input autocomplete="off" formControlName="phone" type="number" class="form-control"
               id="formGroupExampleInput2" placeholder="Phone">
           </div>
           <div
@@ -54,12 +54,12 @@
             <div class="fs-5  text-danger fw-semibold"
               *ngIf="form.controls['phone'].errors && form.controls['phone'].errors['required']">
               Va rugam
-              introduceti telefonul
+              introduceti numarul de telefon
             </div>
 
           </div>
           <div class="form-group">
-            <label for="formGroupExampleInput2">Adresa:</label>
+            <label for="formGroupExampleInput2">Adresa Stradala:</label>
             <input autocomplete="off" formControlName="address" type="text" class="form-control"
               id="formGroupExampleInput2" placeholder="Adresa">
           </div>
@@ -68,7 +68,7 @@
             <div class="fs-5  text-danger fw-semibold"
               *ngIf="form.controls['address'].errors && form.controls['address'].errors['required']">
               Va rugam
-              introduceti adresa
+              introduceti adresa stradala
             </div>
 
           </div>

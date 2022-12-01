@@ -30,6 +30,7 @@ export class AdminsComponent implements OnInit {
   }
   editUser(user: User) {
     this.userToBeEdited = user;
+
   }
   onFormClose() {
     this.adminToBeEdited = null;
